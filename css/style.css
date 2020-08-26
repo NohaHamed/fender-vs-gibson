@@ -1,0 +1,163 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding:0;
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.7), 
+      rgba(250, 249, 249, 0)
+    ), url(../img/patterns/concrete-wall.png);
+}
+.wrapper {
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 0px 10px;
+}
+img {
+    max-width: 100%;
+    margin: auto;
+}
+header {
+    background-color: rgb(217, 233, 248);
+    text-align: center;
+}
+h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    padding-top: 10px;
+    margin: 0;
+}
+h2 {
+    font-size: 1.8rem;
+    padding-bottom: 30px;
+}
+
+p {
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+h4 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 40px;
+}
+
+/* ---h3 style--------------- */
+h3  {
+    font-size: 1.3rem;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+h3:before {
+    border-top: 2px solid #dfdfdf;
+    content:"";
+    margin: 0 auto; /* this centers the line to the full width specified */
+    position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+    top: 50%; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    z-index: -1;
+    }
+
+h3 span { 
+    /* to hide the lines from behind the text, you have to set the background color the same as the container */ 
+    background: #fff; 
+    padding: 0 15px; 
+    border-left: 2px solid #dfdfdf;
+    border-right: 2px solid #dfdfdf;
+    padding-left:  10px;
+    padding-right:  10px;
+}
+    /* ------------------------------------*/
+
+/* ---Figures------------- */
+figure {
+    margin-top: 30px;
+    text-align: center;
+}
+figure img {
+   border: 1px solid white;
+   border-radius: 50%; 
+}
+figcaption {
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Footer ------------------- */
+footer {
+    text-align: center;
+    margin: 50px
+}
+footer a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+
+/* screen min width 800================ */
+@media screen and (min-width: 800px) {
+.header-container {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 15px;
+}
+header {
+    grid-column: span 3;
+}
+.wrapper {
+    max-width: 1000px;
+}
+h2 {
+    padding-bottom: 70px;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+h1 {
+    font-size: 3.3rem;
+    padding-top: 70px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+p {
+    line-height: 1rem;
+    font-size: 0.9rem;
+}
+.header-intro {
+    margin: 20px auto;
+}
+.section-intro {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+.main-picture {
+    grid-column: span 4;
+}
+.section-intro-text {
+    grid-column: span 2;
+}
+.section-intro-text p {
+    font-size: 0.8rem;
+    margin: 15px auto;
+}
+h3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.artists {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+h4 {
+    text-align: left;
+}
+figure {
+    margin: 15px;
+}
+}
+
+/* --------------------------------------- */
